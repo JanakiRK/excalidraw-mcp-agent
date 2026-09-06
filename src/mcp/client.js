@@ -14,11 +14,17 @@ const client = new Client({
 await client.connect(transport);
 
 const result = await client.listTools();
-
 console.log("Connected to Excalidraw MCP!");
-console.log(`Available tools: ${result.tools.length}`);
+const shape = await client.callTool({
+  name: "create_element",
+  arguments: {
+    type: "rectangle",
+    x: 100,
+    y: 100,
+    width: 200,
+    height: 100,
+  },
+});
 
-for (const tool of result.tools) {
-  console.log(`- ${tool.name}`);
-}
+console.log(shape);	
 await client.close();
