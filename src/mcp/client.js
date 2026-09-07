@@ -18,11 +18,10 @@ console.log("Connected to Excalidraw MCP!");
 const shape = await client.callTool({
   name: "create_element",
   arguments: {
-    type: "rectangle",
-    x: 100,
-    y: 100,
-    width: 200,
-    height: 100,
+  type: "text",
+  x: 100,
+  y: 100,
+  text: "Hello from MCP!",
   },
 });
 
