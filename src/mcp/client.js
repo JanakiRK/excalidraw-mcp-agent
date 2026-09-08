@@ -22,6 +22,7 @@ const shape = await client.callTool({
   x: 100,
   y: 100,
   text: "Hello from MCP!",
+  fontSize: 32,
   },
 });
 
