@@ -18,6 +18,7 @@
 
 **Current flow:**
 
+```text
 User prompt
     ↓
 Node.js agent
