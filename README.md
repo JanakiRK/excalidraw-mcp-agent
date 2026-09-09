@@ -20,15 +20,15 @@
 
 
 User prompt
-    ↓
+    ->
 Node.js agent
-    ↓
+    ->
 MCP client
-    ↓
+    ->
 Excalidraw MCP server
-    ↓
+    ->
 create_element
-    ↓
+    ->
 🎨 Excalidraw canvas
 ### Day 4 — Create text with Excalidraw MCP
 
