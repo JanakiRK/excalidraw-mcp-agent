@@ -30,3 +30,23 @@ Excalidraw MCP server
 create_element
     ↓
 🎨 Excalidraw canvas
+### Day 4 — Create text with Excalidraw MCP
+
+- Changed the element type from rectangle to text
+- Added text content with the `text` property
+- Created "Hello from MCP!" on the canvas
+
+### Day 5 — Change text size
+
+- Added the `fontSize` property
+- Created text with a font size of 32
+- Confirmed the change on the Excalidraw canvas
+
+### Day 6 — Create multiple Excalidraw elements
+
+- Learned how `x` controls left/right position
+- Learned how `y` controls up/down position
+- Created two text elements
+- Created a rectangle around the text
+- Used multiple `create_element` calls to build one diagram
+
