@@ -20,9 +20,31 @@ const shape = await client.callTool({
   arguments: {
   type: "text",
   x: 100,
-  y: 100,
+  y: 300,
   text: "Hello from MCP!",
   fontSize: 32,
+  },
+});
+
+const secondText = await client.callTool({
+  name: "create_element",
+  arguments: {
+    type: "text",
+    x: 100,
+    y: 400,
+    text: "This is my first diagram",
+    fontSize: 24,
+  },
+});
+
+const box = await client.callTool({
+  name: "create_element",
+  arguments: {
+    type: "rectangle",
+    x: 70,
+    y: 260,
+    width: 400,
+    height: 200,
   },
 });
 
