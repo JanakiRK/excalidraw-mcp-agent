@@ -28,7 +28,7 @@ MCP client
 Excalidraw MCP server
     ↓
 create_element
-'''text
+```text
     ↓
 🎨 Excalidraw canvas
 ### Day 4 — Create text with Excalidraw MCP
