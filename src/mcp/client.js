@@ -13,12 +13,18 @@ const client = new Client({
 
 await client.connect(transport);
 
-const result = await client.listTools();
+await client.callTool({
+  name: "clear_canvas",
+  arguments: {},
+});
 console.log("Connected to Excalidraw MCP!");
 const shape = await client.callTool({
   name: "create_element",
   arguments: {
-  type: "text",
+  id:"start",
+  type: "rectangle",
+  width: 250,
+  height: 80,
   x: 100,
   y: 300,
   text: "Hello from MCP!",
@@ -29,22 +35,28 @@ const shape = await client.callTool({
 const secondText = await client.callTool({
   name: "create_element",
   arguments: {
-    type: "text",
-    x: 100,
-    y: 400,
+    id: "process",
+    type: "rectangle",
+    width: 300,
+    height: 80,
+    x: 400,
+    y: 300,
     text: "This is my first diagram",
     fontSize: 24,
   },
 });
 
-const box = await client.callTool({
+const arrow = await client.callTool({
   name: "create_element",
   arguments: {
-    type: "rectangle",
-    x: 70,
-    y: 260,
-    width: 400,
-    height: 200,
+    type: "arrow",
+    x: 225,
+    y: 380,
+    width: 0,
+    height: 20,
+    startElementId: "start",
+    endElementId: "process",
+    endArrowhead: "arrow",
   },
 });
 
