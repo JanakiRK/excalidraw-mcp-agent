@@ -1,3 +1,5 @@
+const label = process.argv[2] || "Start";
+const processLabel = process.argv[3] || "Process";
 import { Client } from "@modelcontextprotocol/sdk/client/index.js";
 import { StdioClientTransport } from "@modelcontextprotocol/sdk/client/stdio.js";
 
@@ -27,7 +29,7 @@ const shape = await client.callTool({
   height: 80,
   x: 100,
   y: 300,
-  text: "Hello from MCP!",
+  text: label,
   fontSize: 32,
   },
 });
@@ -41,7 +43,7 @@ const secondText = await client.callTool({
     height: 80,
     x: 400,
     y: 300,
-    text: "This is my first diagram",
+    text: processLabel,
     fontSize: 24,
   },
 });
@@ -52,8 +54,6 @@ const arrow = await client.callTool({
     type: "arrow",
     x: 225,
     y: 380,
-    width: 0,
-    height: 20,
     startElementId: "start",
     endElementId: "process",
     endArrowhead: "arrow",
